@@ -679,3 +679,263 @@ Processing by UsersController#create as */*
   [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("first_name", "last_name", "username", "email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["first_name", "mrinal"], ["last_name", "krishna"], ["username", "krizna"], ["email", "mrinalkrishnanm@rocketmail.com"], ["encrypted_password", "$2a$10$z7ZU3woiAYzMEfLxRUXS9ONLPW.8hbmb9N2YJA3NPJsCL/1R069ie"], ["created_at", "2016-02-28 20:22:14.605572"], ["updated_at", "2016-02-28 20:22:14.605572"]]
   [1m[36m (96.3ms)[0m  [1mcommit transaction[0m
 Completed 200 OK in 289ms (Views: 0.6ms | ActiveRecord: 97.6ms)
+
+
+Started POST "/tokens/verify" for 127.0.0.1 at 2016-03-02 01:51:01 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+AbstractController::ActionNotFound (The action 'verify' could not be found for TokensController):
+  actionpack (4.2.5) lib/abstract_controller/base.rb:132:in `process'
+  actionview (4.2.5) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.5) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.5) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.5) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:76:in `call'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  warden (1.2.4) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.4) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.4) lib/warden/manager.rb:34:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.5) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.5) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  rack-cors (0.4.0) lib/rack/cors.rb:80:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack-cors (0.4.0) lib/rack/cors.rb:80:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/mrinal/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/mrinal/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/mrinal/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/mrinal/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (1.8ms)
+  Rendered /home/mrinal/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /home/mrinal/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/mrinal/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/mrinal/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/mrinal/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (68.0ms)
+  Rendered /home/mrinal/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/mrinal/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/mrinal/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (99.8ms)
+
+
+Started POST "/tokens/verify" for 127.0.0.1 at 2016-03-02 23:28:00 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+AbstractController::ActionNotFound (The action 'verify' could not be found for TokensController):
+  actionpack (4.2.5) lib/abstract_controller/base.rb:132:in `process'
+  actionview (4.2.5) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.5) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.5) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.5) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:76:in `call'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  warden (1.2.4) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.4) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.4) lib/warden/manager.rb:34:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.5) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.5) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  rack-cors (0.4.0) lib/rack/cors.rb:80:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack-cors (0.4.0) lib/rack/cors.rb:80:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/mrinal/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/mrinal/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/mrinal/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/mrinal/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (1.7ms)
+  Rendered /home/mrinal/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /home/mrinal/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/mrinal/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/mrinal/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/mrinal/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (72.8ms)
+  Rendered /home/mrinal/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/mrinal/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/mrinal/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (119.0ms)
+
+
+Started POST "/tokens/verify" for 127.0.0.1 at 2016-03-03 00:16:02 +0530
+Processing by TokensController#verify as */*
+  Parameters: {"user"=>{"username"=>"krizna", "password"=>"[FILTERED]"}, "token"=>{"user"=>{"username"=>"krizna", "password"=>"[FILTERED]"}}}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1  [["username", "krizna"]]
+Completed 200 OK in 201ms (Views: 0.3ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/tokens/verify" for 127.0.0.1 at 2016-03-03 00:18:00 +0530
+Processing by TokensController#verify as */*
+  Parameters: {"user"=>{"username"=>"krizna", "password"=>"[FILTERED]"}, "token"=>{"user"=>{"username"=>"krizna", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1[0m  [["username", "krizna"]]
+#<User:0x00000005c9a928>
+true
+Completed 200 OK in 81ms (Views: 0.2ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/tokens/verify" for 127.0.0.1 at 2016-03-03 00:18:32 +0530
+Processing by TokensController#verify as */*
+  Parameters: {"user"=>{"username"=>"krizna", "password"=>"[FILTERED]"}, "token"=>{"user"=>{"username"=>"krizna", "password"=>"[FILTERED]"}}}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1  [["username", "krizna"]]
+#<User id: 1, created_at: "2016-02-28 20:22:14", updated_at: "2016-02-28 20:22:14", username: "krizna", first_name: "mrinal", last_name: "krishna", access_token: nil, email: "mrinalkrishnanm@rocketmail.com", encrypted_password: "$2a$10$z7ZU3woiAYzMEfLxRUXS9ONLPW.8hbmb9N2YJA3NPJs...", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 0, current_sign_in_at: nil, last_sign_in_at: nil, current_sign_in_ip: nil, last_sign_in_ip: nil>
+true
+Completed 200 OK in 81ms (Views: 0.2ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2016-03-03 00:40:38 +0530
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"first_name"=>"akhil", "last_name"=>"ramesh", "email"=>"akkhil@outlook.com", "username"=>"akkhil", "password"=>"[FILTERED]"}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'akkhil@outlook.com' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "username", "email", "encrypted_password", "created_at", "updated_at", "access_token") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "akhil"], ["last_name", "ramesh"], ["username", "akkhil"], ["email", "akkhil@outlook.com"], ["encrypted_password", "$2a$10$BkiLNpAVeZwDwqBr2j1TDuMin/a4Jn3wUPKS6zKiYIEhyOBXPok32"], ["created_at", "2016-03-02 19:10:38.779504"], ["updated_at", "2016-03-02 19:10:38.779504"], ["access_token", "8203bb9d0734469e8669fbce8147aeaf"]]
+  [1m[35m (118.7ms)[0m  commit transaction
+Completed 200 OK in 270ms (Views: 0.6ms | ActiveRecord: 120.3ms)
+
+
+Started POST "/tokens/verify" for 127.0.0.1 at 2016-03-03 00:41:01 +0530
+Processing by TokensController#verify as */*
+  Parameters: {"user"=>{"username"=>"akkhil", "password"=>"[FILTERED]"}, "token"=>{"user"=>{"username"=>"akkhil", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1[0m  [["username", "akkhil"]]
+#<User id: 2, created_at: "2016-03-02 19:10:38", updated_at: "2016-03-02 19:10:38", username: "akkhil", first_name: "akhil", last_name: "ramesh", access_token: "8203bb9d0734469e8669fbce8147aeaf", email: "akkhil@outlook.com", encrypted_password: "$2a$10$BkiLNpAVeZwDwqBr2j1TDuMin/a4Jn3wUPKS6zKiYIE...", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 0, current_sign_in_at: nil, last_sign_in_at: nil, current_sign_in_ip: nil, last_sign_in_ip: nil>
+true
+Completed 200 OK in 71ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/tokens/verify" for 127.0.0.1 at 2016-03-03 00:43:54 +0530
+Processing by TokensController#verify as */*
+  Parameters: {"user"=>{"username"=>"akkhil", "password"=>"[FILTERED]"}, "token"=>{"user"=>{"username"=>"akkhil", "password"=>"[FILTERED]"}}}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1  [["username", "akkhil"]]
+#<User id: 2, created_at: "2016-03-02 19:10:38", updated_at: "2016-03-02 19:10:38", username: "akkhil", first_name: "akhil", last_name: "ramesh", access_token: "8203bb9d0734469e8669fbce8147aeaf", email: "akkhil@outlook.com", encrypted_password: "$2a$10$BkiLNpAVeZwDwqBr2j1TDuMin/a4Jn3wUPKS6zKiYIE...", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 0, current_sign_in_at: nil, last_sign_in_at: nil, current_sign_in_ip: nil, last_sign_in_ip: nil>
+true
+Completed 200 OK in 69ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/tokens/verify" for 127.0.0.1 at 2016-03-03 00:43:58 +0530
+Processing by TokensController#verify as */*
+  Parameters: {"user"=>{"username"=>"akkhil", "password"=>"[FILTERED]"}, "token"=>{"user"=>{"username"=>"akkhil", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1[0m  [["username", "akkhil"]]
+#<User id: 2, created_at: "2016-03-02 19:10:38", updated_at: "2016-03-02 19:10:38", username: "akkhil", first_name: "akhil", last_name: "ramesh", access_token: "8203bb9d0734469e8669fbce8147aeaf", email: "akkhil@outlook.com", encrypted_password: "$2a$10$BkiLNpAVeZwDwqBr2j1TDuMin/a4Jn3wUPKS6zKiYIE...", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 0, current_sign_in_at: nil, last_sign_in_at: nil, current_sign_in_ip: nil, last_sign_in_ip: nil>
+true
+Completed 200 OK in 69ms (Views: 0.1ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/tokens/verify" for 127.0.0.1 at 2016-03-03 00:44:15 +0530
+Processing by TokensController#verify as */*
+  Parameters: {"user"=>{"username"=>"akkhil", "password"=>"[FILTERED]"}, "token"=>{"user"=>{"username"=>"akkhil", "password"=>"[FILTERED]"}}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1  [["username", "akkhil"]]
+#<User id: 2, created_at: "2016-03-02 19:10:38", updated_at: "2016-03-02 19:10:38", username: "akkhil", first_name: "akhil", last_name: "ramesh", access_token: "8203bb9d0734469e8669fbce8147aeaf", email: "akkhil@outlook.com", encrypted_password: "$2a$10$BkiLNpAVeZwDwqBr2j1TDuMin/a4Jn3wUPKS6zKiYIE...", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 0, current_sign_in_at: nil, last_sign_in_at: nil, current_sign_in_ip: nil, last_sign_in_ip: nil>
+true
+Completed 200 OK in 87ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/tokens/verify" for 127.0.0.1 at 2016-03-03 00:47:37 +0530
+Processing by TokensController#verify as */*
+  Parameters: {"user"=>{"username"=>"akkhil", "password"=>"[FILTERED]"}, "token"=>{"user"=>{"username"=>"akkhil", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1[0m  [["username", "akkhil"]]
+#<User id: 2, created_at: "2016-03-02 19:10:38", updated_at: "2016-03-02 19:10:38", username: "akkhil", first_name: "akhil", last_name: "ramesh", access_token: "8203bb9d0734469e8669fbce8147aeaf", email: "akkhil@outlook.com", encrypted_password: "$2a$10$BkiLNpAVeZwDwqBr2j1TDuMin/a4Jn3wUPKS6zKiYIE...", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 0, current_sign_in_at: nil, last_sign_in_at: nil, current_sign_in_ip: nil, last_sign_in_ip: nil>
+true
+Completed 200 OK in 85ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/tokens/verify" for 127.0.0.1 at 2016-03-03 00:51:46 +0530
+Processing by TokensController#verify as */*
+  Parameters: {"user"=>{"username"=>"akkhil", "password"=>"[FILTERED]"}, "token"=>{"user"=>{"username"=>"akkhil", "password"=>"[FILTERED]"}}}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1  [["username", "akkhil"]]
+8203bb9d0734469e8669fbce8147aeaf
+Completed 200 OK in 81ms (Views: 0.1ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/tokens/verify" for 127.0.0.1 at 2016-03-03 00:52:20 +0530
+Processing by TokensController#verify as */*
+  Parameters: {"user"=>{"username"=>"akkhil", "password"=>"[FILTERED]"}, "token"=>{"user"=>{"username"=>"akkhil", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1[0m  [["username", "akkhil"]]
+8203bb9d0734469e8669fbce8147aeaf
+Completed 200 OK in 82ms (Views: 0.3ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/tokens/verify" for 127.0.0.1 at 2016-03-03 00:54:55 +0530
+Processing by TokensController#verify as */*
+  Parameters: {"user"=>{"username"=>"akkhil", "password"=>"[FILTERED]"}, "token"=>{"user"=>{"username"=>"akkhil", "password"=>"[FILTERED]"}}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1  [["username", "akkhil"]]
+8203bb9d0734469e8669fbce8147aeaf
+Completed 200 OK in 69ms (Views: 0.2ms | ActiveRecord: 0.1ms)
