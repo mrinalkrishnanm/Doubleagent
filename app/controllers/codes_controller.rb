@@ -33,4 +33,10 @@ class CodesController < ApplicationController
     def destroy 
     end
 
+    private
+        def code_params
+            params.require(:code).permit(:name,:language,:difficulty,:app_link,:github_link,:description, :category)
+        end
 end
+
+# kata, web, mobile, snippet 
