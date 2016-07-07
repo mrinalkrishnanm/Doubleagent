@@ -3571,3 +3571,82 @@ Processing by CodesController#search as */*
   Parameters: {"difficulty"=>"easy", "language"=>"ruby", "keyword"=>"", "code"=>{"difficulty"=>"easy", "language"=>"ruby"}}
   [1m[35mCode Load (0.2ms)[0m  SELECT "codes".* FROM "codes" WHERE (language='ruby' AND difficulty='easy')
 Completed 200 OK in 26ms (Views: 6.9ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/codes/search" for ::1 at 2016-07-07 00:22:46 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CodesController#search as */*
+  Parameters: {"difficulty"=>"easy", "language"=>"ruby", "keyword"=>"", "code"=>{"difficulty"=>"easy", "language"=>"ruby"}}
+  [1m[35mCode Load (0.3ms)[0m  SELECT "codes".* FROM "codes" WHERE (language='ruby' AND difficulty='easy')
+Completed 200 OK in 31ms (Views: 9.1ms | ActiveRecord: 0.7ms)
+  [1m[36mCode Load (3.2ms)[0m  [1mSELECT "codes".* FROM "codes"[0m
+
+
+Started POST "/codes/search" for ::1 at 2016-07-07 01:53:41 +0530
+Processing by CodesController#search as */*
+  Parameters: {"difficulty"=>"easy", "language"=>"ruby", "keyword"=>"", "code"=>{"difficulty"=>"easy", "language"=>"ruby"}}
+  [1m[36mCode Load (1.3ms)[0m  [1mSELECT "codes".* FROM "codes" WHERE (language='ruby' AND difficulty='easy')[0m
+Completed 200 OK in 26ms (Views: 17.4ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/codes/search" for ::1 at 2016-07-07 01:54:12 +0530
+Processing by CodesController#search as */*
+  Parameters: {"difficulty"=>"easy", "language"=>"ruby", "keyword"=>"", "code"=>{"difficulty"=>"easy", "language"=>"ruby"}}
+  [1m[35mCode Load (0.4ms)[0m  SELECT "codes".* FROM "codes" WHERE (language='ruby' AND difficulty='easy')
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/codes/search" for ::1 at 2016-07-07 01:55:22 +0530
+Processing by CodesController#search as */*
+  Parameters: {"difficulty"=>"easy", "language"=>"ruby", "keyword"=>"", "code"=>{"difficulty"=>"easy", "language"=>"ruby"}}
+  [1m[36mCode Load (0.4ms)[0m  [1mSELECT "codes".* FROM "codes" WHERE (language='ruby' AND difficulty='easy')[0m
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/codes/search" for ::1 at 2016-07-07 01:59:25 +0530
+Processing by CodesController#search as */*
+  Parameters: {"difficulty"=>"easy", "language"=>"ruby", "keyword"=>"", "code"=>{"difficulty"=>"easy", "language"=>"ruby"}}
+  [1m[35mCode Load (0.7ms)[0m  SELECT "codes".* FROM "codes" WHERE (language='ruby' AND difficulty='easy')
+Completed 200 OK in 21ms (Views: 14.4ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/codes/search" for ::1 at 2016-07-07 02:00:13 +0530
+Processing by CodesController#search as */*
+  Parameters: {"difficulty"=>"easy", "language"=>"ruby", "keyword"=>"", "code"=>{"difficulty"=>"easy", "language"=>"ruby"}}
+  [1m[36mCode Load (0.2ms)[0m  [1mSELECT "codes".* FROM "codes" WHERE (language='ruby' AND difficulty='easy')[0m
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/codes/search" for ::1 at 2016-07-07 02:01:26 +0530
+Processing by CodesController#search as */*
+  Parameters: {"difficulty"=>"easy", "language"=>"ruby", "keyword"=>"", "code"=>{"difficulty"=>"easy", "language"=>"ruby"}}
+  [1m[35mCode Load (0.2ms)[0m  SELECT "codes".* FROM "codes" WHERE (language='ruby' AND difficulty='easy')
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/codes/search" for ::1 at 2016-07-07 02:04:46 +0530
+Processing by CodesController#search as */*
+  Parameters: {"difficulty"=>"easy", "language"=>"ruby", "keyword"=>"", "code"=>{"difficulty"=>"easy", "language"=>"ruby"}}
+  [1m[36mCode Load (1.0ms)[0m  [1mSELECT "codes".* FROM "codes" WHERE (language='ruby' AND difficulty='easy')[0m
+Completed 200 OK in 20ms (Views: 13.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/codes/search" for ::1 at 2016-07-07 02:04:51 +0530
+Processing by CodesController#search as */*
+  Parameters: {"difficulty"=>"easy", "language"=>"ruby", "keyword"=>"", "code"=>{"difficulty"=>"easy", "language"=>"ruby"}}
+  [1m[35mCode Load (0.3ms)[0m  SELECT "codes".* FROM "codes" WHERE (language='ruby' AND difficulty='easy')
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/codes/search" for ::1 at 2016-07-07 02:06:06 +0530
+Processing by CodesController#search as */*
+  Parameters: {"difficulty"=>"easy", "language"=>"ruby", "keyword"=>"", "code"=>{"difficulty"=>"easy", "language"=>"ruby"}}
+  [1m[36mCode Load (0.3ms)[0m  [1mSELECT "codes".* FROM "codes" WHERE (language='ruby' AND difficulty='easy')[0m
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/codes/search" for ::1 at 2016-07-07 02:10:04 +0530
+Processing by CodesController#search as */*
+  Parameters: {"difficulty"=>"easy", "language"=>"ruby", "keyword"=>"", "code"=>{"difficulty"=>"easy", "language"=>"ruby"}}
+  [1m[35mCode Load (1.3ms)[0m  SELECT "codes".* FROM "codes" WHERE (language='ruby' AND difficulty='easy')
+Completed 200 OK in 21ms (Views: 12.7ms | ActiveRecord: 1.3ms)
