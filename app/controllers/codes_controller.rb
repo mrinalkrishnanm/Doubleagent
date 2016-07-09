@@ -9,8 +9,10 @@ class CodesController < ApplicationController
   def search
     if params[:keyword].present? && params[:language].present?
       @code = Code.where("language=? AND name LIKE ?",params[:language],"%#{params[:keyword]}%")
-    else
+    elsif params[:keyword].present?
       @code = Code.where("language=? OR name LIKE ?",params[:keyword],params[:keyword])
+    else
+      @code = Code.where(:language => params[:language])
     end
     render json: @code, status: 200
   end

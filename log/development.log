@@ -3650,3 +3650,45 @@ Processing by CodesController#search as */*
   Parameters: {"difficulty"=>"easy", "language"=>"ruby", "keyword"=>"", "code"=>{"difficulty"=>"easy", "language"=>"ruby"}}
   [1m[35mCode Load (1.3ms)[0m  SELECT "codes".* FROM "codes" WHERE (language='ruby' AND difficulty='easy')
 Completed 200 OK in 21ms (Views: 12.7ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/codes/search" for ::1 at 2016-07-09 01:18:12 +0530
+Processing by CodesController#search as */*
+  Parameters: {"difficulty"=>"easy", "language"=>"ruby", "keyword"=>"", "code"=>{"difficulty"=>"easy", "language"=>"ruby"}}
+  [1m[36mCode Load (0.5ms)[0m  [1mSELECT "codes".* FROM "codes" WHERE (language='' OR name LIKE '')[0m
+Completed 200 OK in 31ms (Views: 9.2ms | ActiveRecord: 2.6ms)
+
+
+Started POST "/codes/search" for ::1 at 2016-07-09 01:21:00 +0530
+Processing by CodesController#search as */*
+  Parameters: {"language"=>"ruby", "keyword"=>"", "code"=>{"language"=>"ruby"}}
+  [1m[35mCode Load (4.3ms)[0m  SELECT "codes".* FROM "codes" WHERE (language='' OR name LIKE '')
+Completed 200 OK in 31ms (Views: 13.4ms | ActiveRecord: 4.3ms)
+
+
+Started POST "/codes/search" for ::1 at 2016-07-09 01:21:08 +0530
+Processing by CodesController#search as */*
+  Parameters: {"language"=>"ruby", "keyword"=>"", "code"=>{"language"=>"ruby"}}
+  [1m[36mCode Load (0.3ms)[0m  [1mSELECT "codes".* FROM "codes" WHERE (language='' OR name LIKE '')[0m
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/codes/search" for ::1 at 2016-07-09 01:24:13 +0530
+Processing by CodesController#search as */*
+  Parameters: {"language"=>"ruby", "keyword"=>"", "code"=>{"language"=>"ruby"}}
+  [1m[35mCode Load (8.4ms)[0m  SELECT "codes".* FROM "codes" WHERE "codes"."language" = ?  [["language", "ruby"]]
+Completed 200 OK in 570ms (Views: 412.8ms | ActiveRecord: 43.9ms)
+
+
+Started POST "/codes/search" for ::1 at 2016-07-09 01:50:10 +0530
+Processing by CodesController#search as */*
+  Parameters: {"language"=>"ruby", "keyword"=>"", "code"=>{"language"=>"ruby"}}
+  [1m[36mCode Load (1.0ms)[0m  [1mSELECT "codes".* FROM "codes" WHERE "codes"."language" = ?[0m  [["language", "ruby"]]
+Completed 200 OK in 24ms (Views: 21.6ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/codes/search" for ::1 at 2016-07-09 01:52:59 +0530
+Processing by CodesController#search as */*
+  Parameters: {"language"=>"ruby", "keyword"=>"", "code"=>{"language"=>"ruby"}}
+  [1m[35mCode Load (1.9ms)[0m  SELECT "codes".* FROM "codes" WHERE "codes"."language" = ?  [["language", "ruby"]]
+Completed 200 OK in 40ms (Views: 28.3ms | ActiveRecord: 1.9ms)
