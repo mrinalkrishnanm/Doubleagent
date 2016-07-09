@@ -7,14 +7,11 @@ class CodesController < ApplicationController
   end
 
   def search
-    if params[:keyword].present? && params[:language].present?
-      @code = Code.where("language=? AND name LIKE ?",params[:language],"%#{params[:keyword]}%")
-    elsif params[:keyword].present?
-      @code = Code.where("language=? OR name LIKE ?",params[:keyword],params[:keyword])
-    else
-      @code = Code.where(:language => params[:language])
+    @codes = Code.where(nil)
+    filtering_params(params).each do |key, value|
+      @codes = @codes.public_send(key, value) if value.present?
     end
-    render json: @code, status: 200
+    render json: @codes, status: 200
   end
 
   def create
@@ -38,6 +35,9 @@ class CodesController < ApplicationController
   private
   def code_params
     params.require(:code).permit(:name,:language,:difficulty,:app_link,:github_link,:description, :category)
+  end
+  def filtering_params(params)
+    params.slice(:category, :keyword, :difficulty, :language)
   end
 end
 
