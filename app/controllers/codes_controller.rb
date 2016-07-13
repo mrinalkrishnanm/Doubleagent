@@ -23,6 +23,11 @@ class CodesController < ApplicationController
     end
   end
 
+  def show
+    @code = Code.find(params[:id])
+    render json: @code, status: 200
+  end
+
   def edit
   end
 
