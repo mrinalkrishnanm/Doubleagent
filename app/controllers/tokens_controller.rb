@@ -1,7 +1,7 @@
 class TokensController < ApplicationController
   def verify
-    @user = User.find_by(username: params[:user][:username])
-    @flag = @user.valid_password?(params[:user][:password])
+    @user = User.find_by(username: params[:username])
+    @flag = @user.valid_password?(params[:password])
     logger.debug(@flag)
     logger.debug(params)
 
