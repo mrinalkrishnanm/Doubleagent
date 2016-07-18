@@ -6545,3 +6545,8 @@ Processing by CodesController#search as */*
   Parameters: {"category"=>"web", "code"=>{"category"=>"web"}}
   [1m[36mCode Load (0.9ms)[0m  [1mSELECT "codes".* FROM "codes" WHERE "codes"."category" = $1[0m  [["category", "web"]]
 Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.9ms)
+  [1m[36mActiveRecord::SchemaMigration Load (19.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddPasswordToUser (20160718201123)
+  [1m[35m (6.4ms)[0m  BEGIN
+  [1m[36m (21.9ms)[0m  [1mALTER TABLE "users" ADD "password" password[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
