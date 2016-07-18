@@ -1,5 +1,4 @@
 class TokensController < ApplicationController
-	skip_before_filter :verify_authenticity_token
 	def verify
 		@user = User.find_by(username: params[:user][:username])
         @flag = @user.valid_password?(params[:user][:password])

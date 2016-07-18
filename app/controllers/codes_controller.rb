@@ -1,11 +1,6 @@
 class CodesController < ApplicationController
-  skip_before_filter :verify_authenticity_token
 
-  def index
-    @code = Code.all
-    render json: @code,status: 200
-  end
-
+  before_action :authenticate, only: [:create,:edit,:update,:new, :destroy]
   def search
     @codes = Code.where(nil)
     filtering_params(params).each do |key, value|
