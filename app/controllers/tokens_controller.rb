@@ -11,16 +11,16 @@ class TokensController < ApplicationController
     		render json: {token: @token}, status: 200
     	else
     		render status: 422
-        end	
+        end
     end
 
 
     def verify_token
     	@user = User.find_by(access_token: params[:token])
     	if @user
-           	render json: @user, status: 200
+          render json: @user, status: 200
      	else
         	render json: @user.errors, status: 422
-      	end		
+      end
     end
 end
