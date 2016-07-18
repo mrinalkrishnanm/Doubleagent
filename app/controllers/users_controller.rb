@@ -14,7 +14,8 @@ class UsersController < ApplicationController
     if @user.save
       render json: @user, status: 200
     else
-      render @user.error, status: 422
+      logger.debug(@user.errors)
+      render @user.errors, status: 422
     end
   end
 
@@ -29,6 +30,6 @@ class UsersController < ApplicationController
 
   private
   def user_params
-    params.require(:user).permit(:first_name,:last_name,:username,:email,:password);
+    params.require(:user).permit(:first_name,:last_name,:username,:email,:password)
   end
 end
