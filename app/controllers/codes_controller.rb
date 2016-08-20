@@ -34,7 +34,7 @@ class CodesController < ApplicationController
 
   private
   def code_params
-    params.require(:code).permit(:name,:language,:difficulty,:app_link,:github_link,:description, :category)
+    params.require(:code).permit(:name,:language,:difficulty,:link,:github_link,:description, :category)
   end
   def filtering_params(params)
     params.slice(:category, :keyword, :difficulty, :language)

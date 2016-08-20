@@ -6550,3 +6550,4 @@ Migrating to AddPasswordToUser (20160718201123)
   [1m[35m (6.4ms)[0m  BEGIN
   [1m[36m (21.9ms)[0m  [1mALTER TABLE "users" ADD "password" password[0m
   [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mCode Load (5.0ms)[0m  [1mSELECT "codes".* FROM "codes"[0m
