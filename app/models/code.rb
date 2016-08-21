@@ -1,6 +1,6 @@
 class Code < ActiveRecord::Base
-    scope :keyword, -> (name) { where("name like ?", "%#{name}%")}
-    scope :language, -> (language) { where(language: language) }
-    scope :category, -> (category) { where(category: category) }
-    scope :difficulty, -> (difficulty) { where(difficulty: difficulty) }
+    scope :keyword, -> (name) { where("LOWER(name) like ?", "%#{name.downcase}%")}
+    scope :language, -> (language) { where(language: language.downcase) }
+    scope :category, -> (category) { where(category: category.downcase) }
+    scope :difficulty, -> (difficulty) { where(difficulty: difficulty.downcase) }
 end
